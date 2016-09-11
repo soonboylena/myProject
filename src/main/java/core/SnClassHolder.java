@@ -25,11 +25,14 @@ public class SnClassHolder {
         return instance;
     }
 
-    public SnClass regiestClass(PropertyMeta... propertyMetas) {
-        SnClass snClass = new SnClass(propertyMetas);
-        classMap.put(snClass.getClassKey(), snClass);
-        logger.debug("注册一个类：{}", snClass.getClassKey());
-        return snClass;
+    public SnClass registerClass(String classKey, PropertyMeta... propertyMetas) {
+
+        if(!classMap.containsKey(classKey)){
+            SnClass snClass = new SnClass(classKey,propertyMetas);
+            classMap.put(classKey, snClass);
+            logger.debug("注册一个类：{}", snClass.getClassKey());
+        }
+        return classMap.get(classKey);
     }
 
 }

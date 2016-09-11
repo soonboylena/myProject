@@ -17,10 +17,17 @@ public class SnObject {
 
     private SnClass snClass = null;
 
-    private LinkedHashMap<String, String> fields;
+    private LinkedHashMap<String, Object> fields;
 
-    public SnObject(int size) {
-        this.fields = new LinkedHashMap<String, String>(size + 10);
+    private String keyWord;
+
+    private String name;
+
+
+    public SnObject(int size, String keyword, String name) {
+        this.fields = new LinkedHashMap<String, Object>(size + 10);
+        this.keyWord = keyword;
+        this.name = name;
     }
 
     public SnClass getSnClass() {
@@ -31,15 +38,27 @@ public class SnObject {
         this.snClass = snClass;
     }
 
-    public LinkedHashMap<String, String> getFields() {
+    public LinkedHashMap<String, Object> getFields() {
         return fields;
     }
 
-    public void setFields(LinkedHashMap<String, String> fields) {
+    public void setFields(LinkedHashMap<String, Object> fields) {
         this.fields = fields;
     }
 
-    public void put(String key, String initValue) {
+    public void put(String key, Object initValue) {
         this.fields.put(key,initValue);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getKeyWord() {
+        return keyWord;
     }
 }

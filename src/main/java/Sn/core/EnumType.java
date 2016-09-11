@@ -1,4 +1,4 @@
-package core;
+package Sn.core;
 
 /**
  * Created by sunb-c on 2016/9/8.

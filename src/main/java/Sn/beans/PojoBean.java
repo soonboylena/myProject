@@ -1,7 +1,7 @@
-package beans;
+package Sn.beans;
 
-import core.SnClass;
-import core.SnClassHolder;
+import Sn.core.SnClass;
+import Sn.core.SnClassHolder;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

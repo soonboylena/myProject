@@ -1,4 +1,4 @@
-package core;
+package Sn.core;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -60,5 +60,9 @@ public class SnObject {
 
     public String getKeyWord() {
         return keyWord;
+    }
+
+    public boolean isClass(String classKey) {
+        return this.snClass.getClassKey().equals(classKey);
     }
 }

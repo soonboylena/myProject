@@ -1,7 +1,7 @@
-package beans;
+package Sn.beans;
 
-import core.SnClass;
-import core.SnObject;
+import Sn.core.SnClass;
+import Sn.core.SnObject;
 import junit.framework.TestCase;
 
 

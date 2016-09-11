@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
 /**
  * Created by sunb-c on 2016/9/8.
  */
-public class PropertyMeta {
+public class PropertyMeta<T> {
 
     /**
      * Logger for this class
@@ -15,13 +15,13 @@ public class PropertyMeta {
     private static final Logger logger = LogManager.getLogger(PropertyMeta.class.getName());
 
     private EnumType type;
-    private String initValue;
+    private T initValue;
     private String propertyName;
 
     public PropertyMeta() {
     }
 
-    public PropertyMeta(EnumType type, String initValue, String propertyName) {
+    public PropertyMeta(EnumType type, T initValue, String propertyName) {
         Preconditions.checkNotNull(type, "type is null!");
         Preconditions.checkNotNull(propertyName, "propertyName is null!");
         this.type = type;
@@ -38,11 +38,11 @@ public class PropertyMeta {
         this.type = type;
     }
 
-    public String getInitValue() {
+    public T getInitValue() {
         return initValue;
     }
 
-    public void setInitValue(String initValue) {
+    public void setInitValue(T initValue) {
         this.initValue = initValue;
     }
 

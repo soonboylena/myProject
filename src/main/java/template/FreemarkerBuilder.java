@@ -20,12 +20,6 @@ public class FreemarkerBuilder {
         if(!b){
             logger.debug("type和snobject不符。");
         }
-
-
-
-
-
-
     }
 
     private boolean checkType(String type, SnObject snObject) {
